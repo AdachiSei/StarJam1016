@@ -6,50 +6,56 @@ using UnityEngine.UI;
 
 public class Daruma : MonoBehaviour
 {
-    public float AnimLength => _clip.length;
+    public float AnimLength => _animClip.length;
 
     public float TurnSpeed => _turnSpeed;
 
-    Animator darumaAnimator;
-
     [SerializeField]
-    AnimationClip _clip;
+    AnimationClip _animClip;
 
     [SerializeField]
     ChangeText _changeText;
 
+    Animation _animation;
+
     float _turnSpeed;
 
-    List<float> turnSpeeds = new List<float>()
+    private void Awake()
     {
-        1.8f,
-        2.0f,
-        2.4f,
-        2.8f,
-        4f,
-    };
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        darumaAnimator = GetComponent<Animator>();
-        darumaAnimator.SetFloat("Speed", turnSpeeds[0]);
+        _animation = GetComponent<Animation>();
+        _animation.Play();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    //List<float> turnSpeeds = new List<float>()
+    //{
+    //    1.8f,
+    //    2.0f,
+    //    2.4f,
+    //    2.8f,
+    //    4f,
+    //};
 
-    }
+    //// Start is called before the first frame update
+    //void Start()
+    //{
+    //    _animator = GetComponent<Animator>();
+    //    _animator.SetFloat("Speed", turnSpeeds[0]);
+    //}
 
-    public void ChangeTurnSpeed()
-    {
-        _turnSpeed = turnSpeeds[Random.Range(0, turnSpeeds.Count)];
-        darumaAnimator.SetFloat("Speed", _turnSpeed);
-    }
+    //// Update is called once per frame
+    //void Update()
+    //{
 
-    public void ChangeMessege()
-    {
-        _changeText.ChangeDarumaMessege();
-    }
+    //}
+
+    //public void ChangeTurnSpeed()
+    //{
+    //    _turnSpeed = turnSpeeds[Random.Range(0, turnSpeeds.Count)];
+    //    _animator.SetFloat("Speed", _turnSpeed);
+    //}
+
+    //public void ChangeMessege()
+    //{
+    //    _changeText.ChangeDarumaMessege();
+    //}
 }

@@ -37,7 +37,7 @@ public class ChangeText : MonoBehaviour
 
     IEnumerator ChangeMessege()
     {
-        _coolTime = _daruma.AnimLength / _messege.Length / TWO_F * _daruma.TurnSpeed;
+        _coolTime = _daruma.AnimLength / _messege.Length / TWO_F;
         //Debug.Log(Daruma.turnSpeed);
         Debug.Log(_coolTime);
         _text.text = "";

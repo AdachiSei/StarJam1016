@@ -5,4 +5,6 @@ public enum SceneType
 {
     SampleScene,
     //‰º‚ÉScene‚Ì–¼‘O‚ğ‘S‚Ä‘‚¢‚Ä‚­‚¾‚³‚¢
+    TitleScene,
+    GameScene
 }
