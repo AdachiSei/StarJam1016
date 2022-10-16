@@ -1,6 +1,6 @@
 # **だるまさんがころんだ**
 
-https://www.youtube.com/watch?v=sr6GzwiAC3M
+[プレイ動画](https://www.youtube.com/watch?v=sr6GzwiAC3M)
 
 A&D or 左右 で上下斜めに移動できます
 
