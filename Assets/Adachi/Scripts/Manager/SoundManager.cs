@@ -68,7 +68,9 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         var s = Array.Find(_soundBGM, e => e.Type == type);
         if (s != null)
         {
-            _audioSource.PlayOneShot(s.Clip);
+            _audioSource.clip = s.Clip;
+            _audioSource.Play();
+            //_audioSource.PlayOneShot(s.Clip);
         }
         else
         {
